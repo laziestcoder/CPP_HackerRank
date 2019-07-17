@@ -1,8 +1,10 @@
 # CPP_HackerRank
-## ![Introduction](Introduction)
-## [Strings] (Strings)
-## [Classes] (Classes) 
-## [STL] (STL) 
-## [Inheritance] (Inheritance) 
-## [Debugging] (Debugging) 
-## [Other Concepts] (Other Concepts)
+
+
+## troduction
+## Strings
+## Classes
+## STL 
+## Inheritance
+## Debugging
+## Other Concepts
