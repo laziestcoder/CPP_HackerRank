@@ -1,4 +1,3 @@
-
 #include <sstream>
 #include <vector>
 #include <iostream>
@@ -228,3 +227,104 @@ int main()
 -749
 */
 
+/**
+Other Solutions
+
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> parseInts(string str) {
+    stringstream ss(str);
+    vector<int> result;
+    char ch;
+    int tmp;
+    while(ss >> tmp) {
+        result.push_back(tmp);
+        ss >> ch;
+    }
+    return result;
+}
+
+int main() {
+    string str;
+    cin >> str;
+    vector<int> integers = parseInts(str);
+    for(int i = 0; i < integers.size(); i++)
+        cout << integers[i] << "\n";
+    return 0;
+}
+
+-------------------
+
+#include <sstream>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+vector<int> parseInts(string str) {
+    stringstream ss;
+    ss << str;
+
+    int i;
+    vector<int> is;
+
+    while(ss >> i) {
+        is.push_back(i);
+
+        if (ss.peek() == ',')
+            ss.ignore();
+    }
+
+    return is;
+}
+
+int main() {
+    string str;
+    cin >> str;
+    vector<int> integers = parseInts(str);
+    for(int i = 0; i < integers.size(); i++) {
+        cout << integers[i] << "\n";
+    }
+
+    return 0;
+}
+
+----------------
+
+#include <sstream>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+vector<int> parseInts(string str) {
+    vector<int> res;
+    bool read;
+    stringstream ss(str);
+    char ch;
+    int i = 0, nextInt;
+
+    while (1){
+        if (i%2==0){
+            read = (ss >> nextInt);
+            if (!read) break;
+            res.push_back(nextInt);
+        }
+        else{
+            read = (ss >> ch);
+        }
+        i++;
+    }
+   return res;
+}
+
+int main() {
+    string str;
+    cin >> str;
+    vector<int> integers = parseInts(str);
+    for(int i = 0; i < integers.size(); i++) {
+        cout << integers[i] << "\n";
+    }
+
+    return 0;
+}
+*/
